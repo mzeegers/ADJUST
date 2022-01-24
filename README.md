@@ -1,8 +1,5 @@
 # ADJUST: A dictionary-based joint reconstruction and unmixing for spectral tomography
 
-
-* **Documentation**: [link]
-
 ## Introduction
 
 ADJUST is a MATLAB solver for large scale spectral 
