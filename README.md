@@ -7,10 +7,10 @@ tomographic inverse problems where a dictionary of spectral response
 of various materials is available.  We also include following algorithms:
 
 1. Unmixing-then-reconstruction (UR), Reconstruction-then-Unmixing (RU) and classic Joint reconstruction algorithm (cJoint) solves the following problem:  
-   ![](./images/eq1.png)
+   ![Alt text](./images/eq1.svg)
 
-2. ADJUST (dictonary-based method):  
-   ![](./images/eq2.png)
+2. ADJUST (dictonary-based method): 
+   ![Alt text](./images/eq2.svg)
 
 The matrix W is a tomography operator of size m x n, 
 Y are the tomographic measurements of size m x c, 
@@ -81,3 +81,6 @@ The algorithms implemented in this MATLAB package are described in following pap
 The preprint can be found [here](https://arxiv.org/pdf/2112.11406.pdf).
 
 
+## Authors
+
+Code written by Ajinkya Kadu and Mathé Zeegers (m[dot].t[dot].zeegers[at]cwi[dot]nl).
