@@ -1,16 +1,24 @@
 # ADJUST: A dictionary-based joint reconstruction and unmixing for spectral tomography
 
+   <p align="center">
+   <img src="./images/UnmixingSchemev4.svg">
+    </p>
+
 ## Introduction
 
 ADJUST is a MATLAB solver for large scale spectral 
 tomographic inverse problems where a dictionary of spectral response
-of various materials is available.  We also include following algorithms:
+of various materials is available. This algorithm jointly reconstructs and unmixes (i.e., material decomposition) spectral tomographic measurements. In this work package the following algorithms are included:
 
 1. Unmixing-then-reconstruction (UR), Reconstruction-then-Unmixing (RU) and classic Joint reconstruction algorithm (cJoint) solves the following problem:  
-   ![Alt text](./images/eq1.svg)
+   <p align="center">
+   <img src="./images/eq1.svg">
+    </p>
 
-2. ADJUST (dictonary-based method): 
-   ![Alt text](./images/eq2.svg)
+2. ADJUST (dictonary-based method):  
+   <p align="center">
+   <img src="./images/eq2.svg">
+   </p>
 
 The matrix W is a tomography operator of size m x n, 
 Y are the tomographic measurements of size m x c, 
@@ -53,12 +61,13 @@ A custom-made disk example with variable size and number of disks, where the dis
 7. example_SheppLogan3D: 
 3D version of the Shepp-Logan phnatom with adjustable size
 
-On each phantom we perform the four implemented algorithms (UR, RU, cJoint and ADJUST). The perfomance of these algorithms are captured by computing and presenting the MSE, PSNR, and the SSIM between the reconstructed material maps and the ground truth. Below are results for a numerical study on the Shepp-Logan phantom:
-
-   ![](./images/comparison.png)
-   
-   ![](./images/comparison-maps.png)
-
+On each phantom the four implemented algorithms (UR, RU, cJoint and ADJUST) are performed. The perfomance of these algorithms are captured by computing and presenting the MSE, PSNR, and the SSIM between the reconstructed material maps and the ground truth. Below are results for a numerical study on the Shepp-Logan phantom:
+   <p align="center">
+   <img src="./images/comparison.png">
+   </p>
+   <p align="center">
+   <img src="./images/comparison-maps.png">
+   </p>
 
 ## Generation of spectral data
 
@@ -83,4 +92,6 @@ The preprint can be found [here](https://arxiv.org/pdf/2112.11406.pdf).
 
 ## Authors
 
-Code written by Ajinkya Kadu and Mathé Zeegers (m[dot].t[dot].zeegers[at]cwi[dot]nl).
+Code written by:
+- Ajinkya Kadu (aak [at] cwi [dot] nl)
+- Mathé Zeegers (m [dot] t [dot] zeegers [at] cwi [dot] nl).
