@@ -1,8 +1,8 @@
 %%% Spectral Tomography
 %%% Shepp Logan phantom of size 128 x 128
-%%% 6 materials 
+%%% 5 materials 
 %%% 100 channels 
-%%% Full-view setting: 360 angles from 0 to 360
+%%% Limited-view setting: parallel-beam 60 angles from 0 to 120 degrees
 %
 % Authors:
 %   Ajinkya Kadu,

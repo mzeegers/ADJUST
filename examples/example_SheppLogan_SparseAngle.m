@@ -1,6 +1,6 @@
 %%% Spectral Tomography
 %%% Shepp Logan phantom of size 128 x 128
-%%% 6 materials 
+%%% 5 materials 
 %%% 100 channels 
 %%% Sparse-angle setting: 10 angles from 0 to 180
 %

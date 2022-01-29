@@ -1,8 +1,8 @@
 %%% Spectral Tomography
 %%% Shepp Logan phantom of size 128 x 128
-%%% 6 materials 
+%%% 5 materials 
 %%% 100 channels 
-%%% Full-view setting: 360 angles from 0 to 360
+%%% Full-view setting: 60 angles from 0 to 180
 %
 % Authors:
 %   Ajinkya Kadu,
@@ -86,4 +86,3 @@ strD.F = Fd;
 %% plots and tables
 
 strOut = computeResults(strProb,strRU,strUR,strJ,strD);
-

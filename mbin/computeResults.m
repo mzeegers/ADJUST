@@ -6,11 +6,13 @@ function [sO] = computeResults(strProb,strRU,strUR,strJ,strD,sliceNo)
 %   4) ADJUST - proposed method 
 %
 % Input:
-%   strProb - 
-%   strRU - 
-%   strUR -
-%   strJ  - 
-%   strD  - 
+%   strProb - problem structure containing A (spatial maps), F (spectral 
+%             maps) and n (size of spatial images) 
+%   strRU - numerical results of RU method that contains A and F
+%   strUR - numerical results of UR method that contains A and F
+%   strJ  - numerical results of classical Joint method that contains A 
+%           and F
+%   strD  - numerical results of ADJUST method that contains A and F
 % 
 % Output:
 %   sO - output structure containing sO.UR, sO.RU, sO.cJoint, sO.ADJUST
@@ -106,7 +108,7 @@ fprintf('-----------------------------------------------------------------------
 k = size(A,2);
 
 if length(n) == 2
-    figure(100);
+    fig = figure(100);colormap hot;
     for i=1:k
         AtI  = reshape(A(:,i),n);
         AruI = reshape(Aurf(:,i),n);
@@ -114,13 +116,21 @@ if length(n) == 2
         AjI  = reshape(Ajf(:,i),n);
         AdI  = reshape(Adf(:,i),n);
 
-        subplot(k,5,5*(i-1)+1);imshow(AtI);title(sprintf('True-%d',i));
-        subplot(k,5,5*(i-1)+2);imshow(AruI);title(sprintf('RU-%d',i));
-        subplot(k,5,5*(i-1)+3);imshow(AurI);title(sprintf('UR-%d',i));
-        subplot(k,5,5*(i-1)+4);imshow(AjI);title(sprintf('cJoint-%d',i));
-        subplot(k,5,5*(i-1)+5);imshow(AdI);title(sprintf('ADJUST-%d',i));
+        subplot(k,5,5*(i-1)+1);imagesc(AtI,[0 1]);title(sprintf('True-%d',i));
+        axis image;set(gca,'XTick',[],'YTick',[]);
+        subplot(k,5,5*(i-1)+2);imagesc(AruI,[0 1]);title(sprintf('RU-%d',i));
+        axis image;set(gca,'XTick',[],'YTick',[]);
+        subplot(k,5,5*(i-1)+3);imagesc(AurI,[0 1]);title(sprintf('UR-%d',i));
+        axis image;set(gca,'XTick',[],'YTick',[]);
+        subplot(k,5,5*(i-1)+4);imagesc(AjI,[0 1]);title(sprintf('cJoint-%d',i));
+        axis image;set(gca,'XTick',[],'YTick',[]);
+        subplot(k,5,5*(i-1)+5);imagesc(AdI,[0 1]);title(sprintf('ADJUST-%d',i));
+        axis image;set(gca,'XTick',[],'YTick',[]);
         pause(1);
     end
+    h = axes(fig,'visible','off');
+    colorbar(h,'Position',[0.93 0.168 0.022 0.7]);
+
 elseif length(n) == 3
     figure(100);
     for i=1:k

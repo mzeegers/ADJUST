@@ -71,7 +71,7 @@ if nargin < 5
 end
 
 epochs  = getoptions(options,'iterMax',1e3); % maximum number of ALS iterations
-epIter  = getoptions(options,'innerIter',2); % inner-iterations
+epIter  = getoptions(options,'innerIter',5); % inner-iterations
 qA      = getoptions(options,'qA',1);        % max-value for matrix A
 resTol  = getoptions(options,'resTol',1e-6); % tolerance for residual
 relTol  = getoptions(options,'relTol',1e-9); % tolerance for residual progress
@@ -271,7 +271,7 @@ x = R;
 if sum(x(:)) >= 1
     for i=1:MAX_ITER
         
-        x1 = transpose(proj_simplex_q(x',1,1));
+        x1 = transpose(proj_simplex_q(0.5*(x+R)',1,1));
         x = proj_simplex_q(x1,1,0);
         
         if norm(x1-x,'fro') < 1e-6

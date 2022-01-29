@@ -14,13 +14,13 @@ end
 switch phantomId
     case 'SheppLogan'
         A = spectralSheppLogan(n);
-        T = readmatrix('MatrixTXray100chan_93mat_20MinEn_119MaxEn.csv');
+        T = readmatrix('MatrixTXrayHard100chan_93mat_20MinEn_119MaxEn.csv');
         F = T(0+(1:size(A,2)),:);
         q = readmatrix('VectorIXrayMatMoEn100Min5Max35.csv');
     case 'Disks'
         k = 8;
         A = spectralPhantomCircles(n,k);
-        T = readmatrix('MatrixTXray100chan_93mat_20MinEn_119MaxEn.csv');
+        T = readmatrix('MatrixTXrayHard100chan_93mat_20MinEn_119MaxEn.csv');
         F = T(10+(1:size(A,2)),:);
         q = readmatrix('VectorIXrayMatMoEn100Min5Max35.csv');
     case 'Thorax'
@@ -33,12 +33,12 @@ switch phantomId
     case 'MixedDisk'
         k = 5;
         A = spectralPhantomCirclesMixed(n, k);
-        T = readmatrix('MatrixTXray100chan_93mat_20MinEn_119MaxEn.csv');
+        T = readmatrix('MatrixTXrayHard100chan_93mat_20MinEn_119MaxEn.csv');
         F = T(0+(1:size(A,2)),:);
         q = readmatrix('VectorIXrayMatMoEn100Min5Max35.csv');
     case 'SheppLogan3D'
         A = spectralSheppLogan3D(n);
-        T = readmatrix('MatrixTXray100chan_93mat_20MinEn_119MaxEn.csv');
+        T = readmatrix('MatrixTXrayHard100chan_93mat_20MinEn_119MaxEn.csv');
         F = T(0+(1:size(A,2)),:);
         q = readmatrix('VectorIXrayMatMoEn100Min5Max35.csv');   
     otherwise
