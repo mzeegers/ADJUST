@@ -23,9 +23,13 @@ phantom   = 'Disks';
 
 %% load phantom
 
-% load matrices
+% load matrices for measurements
+[Am,Fm,Tm,Qm] = loadSpectralPhantom(phantom,n*2);
+
+% load matrices for inversion
 [A,F,T,Q] = loadSpectralPhantom(phantom,n);
-k         = size(A,2);
+
+k = size(A,2);
 
 strProb.A = A;
 strProb.F = F;
@@ -35,22 +39,31 @@ strProb.n = [n n];
 
 %% generate spectral measurements
 
-U0    = A*F;
+U0m    = Am*Fm/2;
 
 % tomography
-n_ang  = 60;
+n_ang  = 180;
 theta  = linspace(0,180,n_ang); 
 
-volGeo = astra_create_vol_geom(n, n);
-projGeo= astra_create_proj_geom('parallel', 1, n,theta);
-W      = opTomo('cuda', projGeo, volGeo);
+volGeom = astra_create_vol_geom(n*2, n*2);
+projGeom = astra_create_proj_geom('parallel', 2, n,theta);
+Wm = opTomo('cuda', projGeom, volGeom);
 
 % measurements with noise
-Y0    = W*U0;
-Y     = 0*Y0;
-for i=1:size(Y0,2)
-   Y(:,i) = astra_add_noise_to_sino(Y0(:,i),Q(i));
+Y0m    = Wm*U0m;
+Y     = 0*Y0m;
+for i=1:size(Y0m,2)
+   Y(:,i) = astra_add_noise_to_sino(Y0m(:,i),Qm(i));
 end
+
+%% (non-inverse-crime) forward operator to be used for inversion
+
+volGeo = astra_create_vol_geom(n, n);
+projGeo     = astra_create_proj_geom('parallel', 1, n,theta);
+W     = opTomo('cuda', projGeo, volGeo);
+
+U0    = A*F;
+Y0 = W*U0;
 
 %% Spectral Tomography algorithms
 
@@ -68,15 +81,15 @@ strUR.F   = Fur;
 
 %%% cJoint
 Jopt.rho      = 1e-2;
-Jopt.iterMax  = 500;
+Jopt.iterMax  = 20;
 [Aj,Fj,histJ] = cJoint(Y,W,k,Jopt);
 
 strJ.A = Aj;
 strJ.F = Fj;
 
-%%% ADJUST
+%% ADJUST
 Dopt.rho        = 1e-2;
-Dopt.iterMax    = 500;
+Dopt.iterMax    = 200;
 [Ad,Fd,Rd,hist] = ADJUST(Y,W,k,T,Dopt);
 
 strD.A = Ad;

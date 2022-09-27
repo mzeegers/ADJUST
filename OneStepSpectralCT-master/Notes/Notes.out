@@ -1,0 +1,25 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Synthetic material basis: mu-preconditioning}{}% 2
+\BOOKMARK [1][-]{section.3}{Cai et al. 2013}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Notations and intermediate variables}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Step by step calculations}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Modifications for synthetic materials}{section.3}% 6
+\BOOKMARK [1][-]{section.4}{Synthetic materials in SQS-based methods}{}% 7
+\BOOKMARK [1][-]{section.5}{Long \046 Fessler 2014}{}% 8
+\BOOKMARK [2][-]{subsection.5.1}{Notations and intermediate variables}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.2}{A note on the conditions for a function to be a surrogate}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.3}{Step by step calculations}{section.5}% 11
+\BOOKMARK [1][-]{section.6}{Weidinger et al. 2016}{}% 12
+\BOOKMARK [2][-]{subsection.6.1}{Notations and intermediate variables}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.2}{Step by step calculations}{section.6}% 14
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Surrogates of the data-attachment term}{subsection.6.2}% 15
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Surrogate of the regularization term}{subsection.6.2}% 16
+\BOOKMARK [3][-]{subsubsection.6.2.3}{Derivatives of the Huber function}{subsection.6.2}% 17
+\BOOKMARK [3][-]{subsubsection.6.2.4}{Derivatives of the hyperbola function defined in Long2014}{subsection.6.2}% 18
+\BOOKMARK [3][-]{subsubsection.6.2.5}{Minimizing these surrogates}{subsection.6.2}% 19
+\BOOKMARK [3][-]{subsubsection.6.2.6}{Modifications for synthetic materials}{subsection.6.2}% 20
+\BOOKMARK [1][-]{section.7}{Mechlem 2017}{}% 21
+\BOOKMARK [2][-]{subsection.7.1}{Calibration}{section.7}% 22
+\BOOKMARK [2][-]{subsection.7.2}{Ordered Subsets}{section.7}% 23
+\BOOKMARK [2][-]{subsection.7.3}{Nesterov}{section.7}% 24
+\BOOKMARK [1][-]{section.8}{Barber 2016}{}% 25

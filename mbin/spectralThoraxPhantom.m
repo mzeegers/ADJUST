@@ -3,7 +3,8 @@ function [A] = spectralThoraxPhantom()
 % and returns material maps for each material seperately 
 
     % Load phantom
-    I  = load('ThoraxPhantom512Slice255Mod.mat').J;
+    I = load('ThoraxPhantom512Slice255Mod.mat');
+    I = I.J;
 
     % Get unique grey-levels (number of materials)
     ui = unique(I);

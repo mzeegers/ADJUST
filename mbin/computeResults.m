@@ -53,6 +53,9 @@ Fj  = strJ.F;
 Ad  = strD.A;
 Fd  = strD.F;
 
+sO.GT.A = A;
+sO.GT.F = F;
+
 
 %% UR
 

@@ -71,7 +71,7 @@ if nargin < 5
 end
 
 epochs  = getoptions(options,'iterMax',1e3); % maximum number of ALS iterations
-epIter  = getoptions(options,'innerIter',5); % inner-iterations
+epIter  = getoptions(options,'innerIter',2); % inner-iterations
 qA      = getoptions(options,'qA',1);        % max-value for matrix A
 resTol  = getoptions(options,'resTol',1e-6); % tolerance for residual
 relTol  = getoptions(options,'relTol',1e-9); % tolerance for residual progress

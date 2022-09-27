@@ -14,27 +14,31 @@ end
 switch phantomId
     case 'SheppLogan'
         A = spectralSheppLogan(n);
-        T = readmatrix('MatrixTXrayHard100chan_93mat_20MinEn_119MaxEn.csv');
+        T = readmatrix('AllOtherPhantoms_MatrixTXray100chan_42_MinEn5_MaxEn35_mat_CORRECTED');
         F = T(0+(1:size(A,2)),:);
         q = readmatrix('VectorIXrayMatMoEn100Min5Max35.csv');
     case 'Disks'
         k = 8;
         A = spectralPhantomCircles(n,k);
-        T = readmatrix('MatrixTXrayHard100chan_93mat_20MinEn_119MaxEn.csv');
+        T = readmatrix('AllOtherPhantoms_MatrixTXray100chan_42_MinEn5_MaxEn35_mat_CORRECTED');
         F = T(10+(1:size(A,2)),:);
+        %T = readmatrix('AllOtherPhantomsIncludingLowAtNo_MatrixTXray100chan_64_MinEn5_MaxEn35_mat_CORRECTED');
+        %F = T(32+(1:size(A,2)),:);
         q = readmatrix('VectorIXrayMatMoEn100Min5Max35.csv');
     case 'Thorax'
         A0 = spectralThoraxPhantom();   
         A  = [A0(:,1)+A0(:,2) A0(:,3)+A0(:,4) A0(:,5)+A0(:,7) A0(:,6) A0(:,8)];
-        T  = readmatrix('Thorax_MatrixTXray100chan_60mat_MinEn20_MaxEn80.csv');
-        F  = readmatrix('Thorax_MatrixFXray100chan_6matBoneBloodIodineSofttissueBloodLungsIodine_MinEn20_MaxEn80.csv');
+        T  = readmatrix('Thorax_MatrixTXray100chan_60mat_20to80kV_CORRECTED');
+        F  = readmatrix('Thorax_MatrixFXray100chan_17matBoneBloodIodineSofttissueBloodLungsIodine_20to80kV_CORRECTED.csv');
+        T  = [T;F(2,:)];
         F  = F(1:5,:); %remove the pure iodine from the dictionary 
         q  = readmatrix('VectorIXrayMatWEn100Min20Max80.csv');
     case 'MixedDisk'
         k = 5;
         A = spectralPhantomCirclesMixed(n, k);
-        T = readmatrix('MatrixTXrayHard100chan_93mat_20MinEn_119MaxEn.csv');
-        F = T(0+(1:size(A,2)),:);
+        %T = readmatrix('MatrixTXrayHard100chan_93mat_20MinEn_119MaxEn.csv');
+        T = readmatrix('AllOtherPhantoms_MatrixTXray100chan_42_MinEn5_MaxEn35_mat_CORRECTED');
+        F = T(10+(1:size(A,2)),:);
         q = readmatrix('VectorIXrayMatMoEn100Min5Max35.csv');
     case 'SheppLogan3D'
         A = spectralSheppLogan3D(n);

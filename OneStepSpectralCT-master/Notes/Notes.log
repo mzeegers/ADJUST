@@ -1,0 +1,1468 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.4)  5 NOV 2021 11:51
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Notes.tex
+(./Notes.tex
+LaTeX2e <2017-04-15>
+Babel <3.15> and hyphenation patterns for 84 language(s) loaded.
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.s
+ty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.st
+y
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip43
+For additional information on amsmath, use the `?' option.
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen103
+))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+) (/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.st
+y
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks16
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks17
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks20
+\thm@bodyfont=\toks21
+\thm@headfont=\toks22
+\thm@notefont=\toks23
+\thm@headpunct=\toks24
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks25
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/subfigure/subfigure
+.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip49
+\subfigcapskip=\skip50
+\subfigcaptopadj=\dimen112
+\subfigbottomskip=\skip51
+\subfigcapmargin=\dimen113
+\subfiglabelskip=\skip52
+\c@subfigure=\count99
+\c@lofdepth=\count100
+\c@subtable=\count101
+\c@lotdepth=\count102
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/subfigure/subfigure
+.cfg)
+\subfig@top=\skip53
+\subfig@bottom=\skip54
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.s
+ty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks26
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/graphics/graphics.s
+ty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphi
+cs.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex
+.def
+File: pdftex.def 2018/01/01 v1.0k Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen114
+\Gin@req@width=\dimen115
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/caption/caption3.st
+y
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen116
+\captionmargin@=\dimen117
+\captionwidth=\dimen118
+\caption@tempdima=\dimen119
+\caption@indent=\dimen120
+\caption@parindent=\dimen121
+\caption@hangindent=\dimen122
+)
+\c@ContinuedFloat=\count103
+Package caption Info: subfigure package is loaded.
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks27
+\inpenc@posthook=\toks28
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0100 (decimal 256)
+   defining Unicode char U+0101 (decimal 257)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+0108 (decimal 264)
+   defining Unicode char U+0109 (decimal 265)
+   defining Unicode char U+010A (decimal 266)
+   defining Unicode char U+010B (decimal 267)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0112 (decimal 274)
+   defining Unicode char U+0113 (decimal 275)
+   defining Unicode char U+0114 (decimal 276)
+   defining Unicode char U+0115 (decimal 277)
+   defining Unicode char U+0116 (decimal 278)
+   defining Unicode char U+0117 (decimal 279)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011C (decimal 284)
+   defining Unicode char U+011D (decimal 285)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0120 (decimal 288)
+   defining Unicode char U+0121 (decimal 289)
+   defining Unicode char U+0122 (decimal 290)
+   defining Unicode char U+0123 (decimal 291)
+   defining Unicode char U+0124 (decimal 292)
+   defining Unicode char U+0125 (decimal 293)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+012A (decimal 298)
+   defining Unicode char U+012B (decimal 299)
+   defining Unicode char U+012C (decimal 300)
+   defining Unicode char U+012D (decimal 301)
+   defining Unicode char U+012E (decimal 302)
+   defining Unicode char U+012F (decimal 303)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0134 (decimal 308)
+   defining Unicode char U+0135 (decimal 309)
+   defining Unicode char U+0136 (decimal 310)
+   defining Unicode char U+0137 (decimal 311)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013B (decimal 315)
+   defining Unicode char U+013C (decimal 316)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0145 (decimal 325)
+   defining Unicode char U+0146 (decimal 326)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+014C (decimal 332)
+   defining Unicode char U+014D (decimal 333)
+   defining Unicode char U+014E (decimal 334)
+   defining Unicode char U+014F (decimal 335)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0156 (decimal 342)
+   defining Unicode char U+0157 (decimal 343)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015C (decimal 348)
+   defining Unicode char U+015D (decimal 349)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+016A (decimal 362)
+   defining Unicode char U+016B (decimal 363)
+   defining Unicode char U+016C (decimal 364)
+   defining Unicode char U+016D (decimal 365)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0172 (decimal 370)
+   defining Unicode char U+0173 (decimal 371)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+01CD (decimal 461)
+   defining Unicode char U+01CE (decimal 462)
+   defining Unicode char U+01CF (decimal 463)
+   defining Unicode char U+01D0 (decimal 464)
+   defining Unicode char U+01D1 (decimal 465)
+   defining Unicode char U+01D2 (decimal 466)
+   defining Unicode char U+01D3 (decimal 467)
+   defining Unicode char U+01D4 (decimal 468)
+   defining Unicode char U+01E2 (decimal 482)
+   defining Unicode char U+01E3 (decimal 483)
+   defining Unicode char U+01E6 (decimal 486)
+   defining Unicode char U+01E7 (decimal 487)
+   defining Unicode char U+01E8 (decimal 488)
+   defining Unicode char U+01E9 (decimal 489)
+   defining Unicode char U+01EA (decimal 490)
+   defining Unicode char U+01EB (decimal 491)
+   defining Unicode char U+01F0 (decimal 496)
+   defining Unicode char U+01F4 (decimal 500)
+   defining Unicode char U+01F5 (decimal 501)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0232 (decimal 562)
+   defining Unicode char U+0233 (decimal 563)
+   defining Unicode char U+1E02 (decimal 7682)
+   defining Unicode char U+1E03 (decimal 7683)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2010 (decimal 8208)
+   defining Unicode char U+2011 (decimal 8209)
+   defining Unicode char U+2012 (decimal 8210)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2015 (decimal 8213)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+1E20 (decimal 7712)
+   defining Unicode char U+1E21 (decimal 7713)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip55
+\bibsep=\skip56
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count104
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.s
+ty
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-h
+yperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-g
+eneric.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.s
+ty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.st
+y
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.
+sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen123
+\Hy@linkcounter=\count105
+\Hy@pagecounter=\count106
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count107
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperre
+f.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4751.
+\c@Hy@tempcnt=\count108
+ (/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5104.
+\XeTeXLinkMargin=\dimen124
+\Fld@menulength=\count109
+\Field@Width=\dimen125
+\Fld@charsize=\dimen126
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
+\Hy@abspage=\count110
+\c@Item=\count111
+\c@Hfootnote=\count112
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.de
+f
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+\Fld@listcount=\count113
+\c@bookmark@seq@number=\count114
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilec
+heck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip57
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen127
+\extrarowheight=\dimen128
+\NC@list=\toks29
+\extratabsurround=\skip58
+\backup@length=\skip59
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/multirow/multirow.s
+ty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip60
+\multirow@cntb=\count115
+\multirow@dima=\skip61
+\bigstrutjot=\dimen129
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
+\c@tracingmulticols=\count116
+\mult@box=\box28
+\multicol@leftmargin=\dimen130
+\c@unbalance=\count117
+\c@collectmore=\count118
+\doublecol@number=\count119
+\multicoltolerance=\count120
+\multicolpretolerance=\count121
+\full@width=\dimen131
+\page@free=\dimen132
+\premulticols=\dimen133
+\postmulticols=\dimen134
+\multicolsep=\skip62
+\multicolbaselineskip=\skip63
+\partial@page=\box29
+\last@line=\box30
+\maxbalancingoverflow=\dimen135
+\mult@rightbox=\box31
+\mult@grightbox=\box32
+\mult@gfirstbox=\box33
+\mult@firstbox=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\c@columnbadness=\count122
+\c@finalcolumnbadness=\count123
+\last@try=\dimen136
+\multicolovershoot=\dimen137
+\multicolundershoot=\dimen138
+\mult@nat@firstbox=\box52
+\colbreak@box=\box53
+\mc@col@check@num=\count124
+) (/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/doublestroke/dsfont
+.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/pgf/frontendlayer/t
+ikz.sty
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgf.
+sty
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfrc
+s.sty
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgf
+util-common.tex
+\pgfutil@everybye=\toks30
+\pgfutil@tempdima=\dimen139
+\pgfutil@tempdimb=\dimen140
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgf
+util-common-lists.tex))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgf
+util-latex.def
+\pgfutil@abb=\box54
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgf
+rcs.code.tex
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgfc
+ore.sty
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/pgf/systemlayer/pgf
+sys.sty
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/p
+gfsys.code.tex
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgf
+keys.code.tex
+\pgfkeys@pathtoks=\toks31
+\pgfkeys@temptoks=\toks32
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgf
+keysfiltered.code.tex
+\pgfkeys@tmptoks=\toks33
+))
+\pgf@x=\dimen141
+\pgf@y=\dimen142
+\pgf@xa=\dimen143
+\pgf@ya=\dimen144
+\pgf@xb=\dimen145
+\pgf@yb=\dimen146
+\pgf@xc=\dimen147
+\pgf@yc=\dimen148
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count125
+\c@pgf@countb=\count126
+\c@pgf@countc=\count127
+\c@pgf@countd=\count128
+\t@pgf@toka=\toks34
+\t@pgf@tokb=\toks35
+\t@pgf@tokc=\toks36
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/p
+gf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/p
+gfsys-pdftex.def
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/p
+gfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/p
+gfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count129
+\pgfsyssoftpath@bigbuffer@items=\count130
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/p
+gfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.
+cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.
+code.tex
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathc
+alc.code.tex
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathu
+til.code.tex)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathp
+arser.code.tex
+\pgfmath@dimen=\dimen149
+\pgfmath@count=\count131
+\pgfmath@box=\box55
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathf
+unctions.code.tex
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathf
+unctions.basic.code.tex)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathf
+unctions.trigonometric.code.tex)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathf
+unctions.random.code.tex)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathf
+unctions.comparison.code.tex)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathf
+unctions.base.code.tex)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathf
+unctions.round.code.tex)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathf
+unctions.misc.code.tex)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathf
+unctions.integerarithmetics.code.tex)))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathf
+loat.code.tex
+\c@pgfmathroundto@lastzeros=\count132
+))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcorepoints.code.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen150
+\pgf@picmaxx=\dimen151
+\pgf@picminy=\dimen152
+\pgf@picmaxy=\dimen153
+\pgf@pathminx=\dimen154
+\pgf@pathmaxx=\dimen155
+\pgf@pathminy=\dimen156
+\pgf@pathmaxy=\dimen157
+\pgf@xx=\dimen158
+\pgf@xy=\dimen159
+\pgf@yx=\dimen160
+\pgf@yy=\dimen161
+\pgf@zx=\dimen162
+\pgf@zy=\dimen163
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen164
+\pgf@path@lasty=\dimen165
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen166
+\pgf@shorten@start@additional=\dimen167
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcorescopes.code.tex
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count133
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen168
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen169
+\pgf@pt@y=\dimen170
+\pgf@pt@temp=\dimen171
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcorearrows.code.tex
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen172
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcoreshade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen173
+\pgf@sys@shading@range@num=\count134
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box59
+))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcorelayers.code.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pg
+fcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmo
+duleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box60
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmo
+duleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/p
+gfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen174
+\pgf@nodesepend=\dimen175
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/p
+gfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgffo
+r.sty
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfke
+ys.sty
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgf
+keys.code.tex))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/pgf/math/pgfmath.st
+y
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.
+code.tex))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgf
+for.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.
+code.tex)
+\pgffor@iter=\dimen176
+\pgffor@skip=\dimen177
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
+))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer
+/tikz/tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgf
+libraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count135
+\pgfplotmarksize=\dimen178
+)
+\tikz@lastx=\dimen179
+\tikz@lasty=\dimen180
+\tikz@lastxsaved=\dimen181
+\tikz@lastysaved=\dimen182
+\tikzleveldistance=\dimen183
+\tikzsiblingdistance=\dimen184
+\tikz@figbox=\box61
+\tikz@figbox@bg=\box62
+\tikz@tempbox=\box63
+\tikz@tempbox@bg=\box64
+\tikztreelevel=\count136
+\tikznumberofchildren=\count137
+\tikznumberofcurrentchild=\count138
+\tikz@fig@count=\count139
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmo
+dulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count140
+\pgfmatrixcurrentcolumn=\count141
+\pgf@matrix@numberofcolumns=\count142
+)
+\tikz@expandcount=\count143
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer
+/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer
+/tikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgf
+libraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+\arrowsize=\dimen185
+))
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer
+/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/geometry/geometry.s
+ty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count144
+\Gm@cntv=\count145
+\c@Gm@tempcnt=\count146
+\Gm@bindingoffset=\dimen186
+\Gm@wd@mp=\dimen187
+\Gm@odd@mp=\dimen188
+\Gm@even@mp=\dimen189
+\Gm@layoutwidth=\dimen190
+\Gm@layoutheight=\dimen191
+\Gm@layouthoffset=\dimen192
+\Gm@layoutvoffset=\dimen193
+\Gm@dimlist=\toks42
+)
+No file Notes.aux.
+\openout1 = `Notes.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pd
+f.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count147
+\scratchdimen=\dimen194
+\scratchbox=\box65
+\nofMPsegments=\count148
+\nofMParguments=\count149
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count150
+\MPscratchDim=\dimen195
+\MPnumerator=\count151
+\makeMPintoPDFobject=\count152
+\everyMPtoPDFconversion=\toks44
+)
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-b
+ase.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopd
+f-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box66
+Package hyperref Info: Link coloring OFF on input line 56.
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.st
+y
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitle
+string.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count153
+)
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \nameref on input line 56.
+\@outlinefile=\write4
+\openout4 = `Notes.out'.
+
+ ABD: EveryShipout initializing macros
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
+* v-part:(T,H,B)=(42.67912pt, 759.6886pt, 42.67912pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=512.14963pt
+* \textheight=759.6886pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-66.59087pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=57.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 59.
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 59.
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+Package natbib Warning: Citation `barber_algorithm_2016' on page  undefined on 
+input line 72.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 77.
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
+
+
+Package natbib Warning: Citation `barber_algorithm_2016' on page  undefined on 
+input line 79.
+
+
+Package natbib Warning: Citation `barber_algorithm_2016' on page  undefined on 
+input line 80.
+
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 84.
+
+(/export/scratch1/zeegers/texlive/2017/texmf-dist/tex/latex/doublestroke/Udsrom
+.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+
+Package natbib Warning: Citation `fessler_method_2003' on page  undefined on in
+put line 93.
+
+
+Package natbib Warning: Citation `cai_full-spectral_2013' on page  undefined on
+ input line 99.
+
+[1
+
+{/export/scratch1/zeegers/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex
+.map}]
+
+LaTeX Warning: Reference `fig:dependenciesDiagram' on page  undefined on input 
+line 133.
+
+
+Package natbib Warning: Citation `cai_full-spectral_2013' on page  undefined on
+ input line 170.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.184 \end{equation*}
+                      [2]
+
+LaTeX Warning: Reference `sec:modifs' on page  undefined on input line 234.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.249 \end{equation*}
+                      [3]
+
+Package natbib Warning: Citation `long_multi-material_2014' on page  undefined 
+on input line 281.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.300  \item $
+              s_{il}(x) = [A x_l]_i = \sum_{j=1}^{N_p} a_{ij}x_{lj}$: line i...
+[4]
+
+Package natbib Warning: Citation `long_multi-material_2014' on page  undefined 
+on input line 302.
+
+
+LaTeX Warning: Reference `sec:mu' on page  undefined on input line 368.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.375 \begin{equation*}
+                        [5]
+
+LaTeX Warning: Reference `sec:regulWeidinger' on page  undefined on input line 
+390.
+
+
+LaTeX Warning: Reference `sec:synthWeidinger' on page  undefined on input line 
+390.
+
+
+Package natbib Warning: Citation `weidinger_polychromatic_2016' on page  undefi
+ned on input line 393.
+
+
+Package natbib Warning: Citation `long_multi-material_2014' on page  undefined 
+on input line 393.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.411   \item $
+               \bar{N}_i^b(f)$: expected number of photon counts in pixel $i...
+[6]
+
+Package natbib Warning: Citation `weidinger_polychromatic_2016' on page  undefi
+ned on input line 421.
+
+
+Package natbib Warning: Citation `weidinger_polychromatic_2016' on page  undefi
+ned on input line 422.
+
+
+Package natbib Warning: Citation `erdogan_monotonic_1999' on page  undefined on
+ input line 458.
+
+
+Package natbib Warning: Citation `erdogan_monotonic_1999' on page  undefined on
+ input line 458.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.467 \begin{equation*}
+                        [7]
+
+Package natbib Warning: Citation `long_multi-material_2014' on page  undefined 
+on input line 493.
+
+
+Package natbib Warning: Citation `green_bayesian_1990' on page  undefined on in
+put line 494.
+
+
+Package natbib Warning: Citation `erdogan_ordered_1999' on page  undefined on i
+nput line 496.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.503 \end{equation*}
+                      [8]
+
+Package natbib Warning: Citation `cai_full-spectral_2013' on page  undefined on
+ input line 543.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
+
+ []
+
+
+Overfull \vbox (11.00095pt too high) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.564 \end{multicols}
+                      [9]
+
+Package natbib Warning: Citation `long_multi-material_2014' on page  undefined 
+on input line 567.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--576
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--576
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.631 \end{equation*}
+                      [10]pdfTeX warning (ext4): destination with the same iden
+tifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.679 \begin{equation*}
+                        [11]
+
+LaTeX Warning: Reference `sec:regulWeidinger' on page  undefined on input line 
+691.
+
+
+Package natbib Warning: Citation `mechlem_joint_2017' on page  undefined on inp
+ut line 702.
+
+
+Package natbib Warning: Citation `weidinger_polychromatic_2016' on page  undefi
+ned on input line 702.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.730 \begin{equation*}
+                        [12]
+
+Package natbib Warning: Citation `barber_algorithm_2016' on page  undefined on 
+input line 760.
+
+
+Package natbib Warning: Citation `barber_mocca:_2015' on page  undefined on inp
+ut line 761.
+
+
+Package natbib Warning: Citation `barber_algorithm_2016' on page  undefined on 
+input line 762.
+
+
+Package natbib Warning: Citation `chambolle_first-order_2011' on page  undefine
+d on input line 784.
+
+No file Notes.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.792 \end{document}
+                     [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 792.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 792.
+ (./Notes.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 792.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 792.
+
+
+Package rerunfilecheck Warning: File `Notes.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Notes.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  3B1CB75B18E73117C834D6C41143B7EB;1905.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 792.
+ ) 
+Here is how much of TeX's memory you used:
+ 18996 strings out of 492985
+ 355614 string characters out of 6126062
+ 427986 words of memory out of 5000000
+ 22191 multiletter control sequences out of 15000+600000
+ 17655 words of font info for 67 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,20n,61p,441b,812s stack positions out of 5000i,500n,10000p,200000b,80000s
+</export/scratch1/zeegers/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb></export/scratch1/zeegers/texlive/2017/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb></export/scratch1/zeegers/texlive/2017/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmbx9.pfb></export/scratch1/zeegers/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></export/scratch1/zeegers/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></export/
+scratch1/zeegers/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb></export/scratch1/zeegers/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi5.pfb></export/scratch1/zeegers/texlive/2017/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb></export/scratch1/zeegers/texlive/2017/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmib10.pfb></export/scratch1/zeegers/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></export/scratch1/zeegers
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></export/scra
+tch1/zeegers/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><
+/export/scratch1/zeegers/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr5.pfb></export/scratch1/zeegers/texlive/2017/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr7.pfb></export/scratch1/zeegers/texlive/2017/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb></export/scratch1/zeegers/texlive/2017/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr9.pfb></export/scratch1/zeegers/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></export/scratch1/zeege
+rs/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></export/sc
+ratch1/zeegers/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+></export/scratch1/zeegers/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti10.pfb></export/scratch1/zeegers/texlive/2017/texmf-dist/fonts/type1/pub
+lic/doublestroke/dsrom10.pfb></export/scratch1/zeegers/texlive/2017/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Notes.pdf (13 pages, 309967 bytes).
+PDF statistics:
+ 177 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+
