@@ -59,6 +59,7 @@ epIter  = getoptions(options, 'innerIter' , 2); % inner-iterations
 resTol  = getoptions(options, 'resTol' , 1e-6); % tolerance for residual
 progTol = getoptions(options, 'progTol' , 1e-6);% tolerance for progress
 rho     = getoptions(options, 'rho' , 0.01);    % acceleration parameter
+showIter= getoptions(options, 'showIter', 1);   % display iter
 
 %% initialization
 
@@ -123,6 +124,7 @@ for i=1:epochs
     res  = (Y - W*(A*F));
     Q    = Q + res;
 
+    % register time
     time_iter = toc;
     time_hist = time_hist + time_iter;
 
@@ -137,10 +139,12 @@ for i=1:epochs
     end
 
     % show iterate and progress
+    if ((showIter == 1) && (rem(i,100)==0)) || (showIter > 1)
     fprintf('%10d %12.3e %12.3e %12.3e [%4.2e/%4.2e]\n',i,...
         hist.res(i),hist.res_prog(i),hist.prog(i),time_iter,time_hist);
+    end
 
-    % record solution
+    % record solution with least residual (since the convegence is non-monotonic)
     if i==1
         Asol = A;Fsol = F;
         hist.resmin = hist.res(i);
@@ -167,6 +171,7 @@ end
 
 function [f,g] = misfitF(F,Y,W,A,k,nY)
 % misfit function for matrix F, where Y = W * A * F.
+% provide functional value and gradient at given point
 
 % get the size of U and reshape matrix R
 [m,c] = size(Y);
@@ -181,6 +186,7 @@ end
 
 function [f,g] = misfitA(A,F,Y,W,k,nY)
 % misfit function handle for matrix A
+% provide functional value and gradient at given point
 
 % get the size of U and reshape A
 [m,n] = size(W);
@@ -196,7 +202,7 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function [x] = projA(x)
-% projector for matrix A (simplex constraints - on rows)
+% projector for matrix A (bounds constraints)
 
 x(x < 0) = 0;
 x(x > 1) = 1;

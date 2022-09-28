@@ -43,31 +43,45 @@ https://www.cs.ubc.ca/~schmidtm/Software/minConf.html
 https://www.mathworks.com/matlabcentral/fileexchange/9416-3d-shepp-logan-phantom
 
 
-## Examples:
+## Scripts:
 
-Seven examples are provided with the code. Before running any example, please run the startup.m script first. Each example uses a different phantom:
-1. example_SheppLogan: 
+Eight examples are provided with the code. Before running any example, please run the startup.m script first.
+1. example1_SheppLogan: 
 The classic Shepp-Logan phantom with variable size
-2. example_Disk: 
+2. example2_Disk: 
 A custom-made disk example with variable size and number of disks
-3. example_Thorax: 
+3. example3_Thorax: 
 The synthetic phantom mimics internal body structure in an abstract fashion (taken from the CONRAD software framework: https://git5.cs.fau.de/PyConrad/pyCONRAD)
-4. example_SheppLogan_SparseAngle: 
+4. example4_SheppLogan_SparseAngle: 
 The Shepp-Logan phantom with only 10 projection angles (adjustable)
-5. example_SheppLogan_LimitedView: 
+5. example5_SheppLogan_LimitedView: 
 The Shepp-Logan phantom with a missing wedge of 60 degrees (adjustable)
-6. example_MixedDisk: 
+6. example6_MixedDisk: 
 A custom-made disk example with variable size and number of disks, where the disks consists of multiple materials
-7. example_SheppLogan3D: 
+7. example7_SheppLogan3D: 
 3D version of the Shepp-Logan phnatom with adjustable size
+8. example8_microCTData.m:
+A demonstration of the approach on real micro-CT data from a natural rock sample. The source of the data can be found further below.
 
-On each phantom the four implemented algorithms (UR, RU, cJoint and ADJUST) are performed. The perfomance of these algorithms are captured by computing and presenting the MSE, PSNR, and the SSIM between the reconstructed material maps and the ground truth. Below are results for a numerical study on the Shepp-Logan phantom:
+On each case the four implemented algorithms (UR, RU, cJoint and ADJUST) can be tested. The perfomance of these algorithms are captured by computing and presenting the MSE, PSNR, and the SSIM between the reconstructed material spatial maps and the ground truth. 
+
+
+## Example results:
+
+As an example, below are results for a numerical study on the Shepp-Logan phantom:
    <p align="center">
    <img src="./images/comparison.png">
    </p>
    <p align="center">
    <img src="./images/comparison-maps.png">
    </p>
+   
+For the micro-CT dataset, four different materials (lead, tungsten, quartz and gold) can be reconstructed. An example reconstruction is shown below:
+   
+   <p align="center">
+   <img src="./images/micro_ct_dataset_result.png">
+   </p>
+
 
 ## Generation of spectral data
 
@@ -77,17 +91,35 @@ These scripts are written in Python (version 3.7 or higher). Apart from this, ph
 
 ## References
 
-The algorithms implemented in this MATLAB package are described in following paper:
+The algorithms implemented in this MATLAB package are described in following [paper](https://iopscience.iop.org/article/10.1088/1361-6420/ac932e):
 
 ```
 @article{
   title={ADJUST: A Dictionary-Based Joint Reconstruction and Unmixing Method for Spectral Tomography},
   author={Zeegers, Math{\'e} T and Kadu, Ajinkya and van Leeuwen, Tristan and Batenburg, Kees Joost},
-  journal={arXiv preprint arXiv:2112.11406},
-  year={2021}
+  journal={Inverse Problems},
+  year={2022},
+  publisher={IOP Publishing},
+  doi={10.1088/1361-6420/ac932e}
 }
 ```
-The preprint can be found [here](https://arxiv.org/pdf/2112.11406.pdf).
+The preprint can be found [here](https://arxiv.org/abs/2112.11406)
+
+The micro-CT dataset required to run the eighth script is introduced in the paper below: 
+
+```
+@article{sittner2021spectral,
+  title={Spectral X-ray computed micro tomography: 3-dimensional chemical imaging},
+  author={Sittner, Jonathan and Godinho, Jose RA and Renno, Axel D and Cnudde, Veerle and Boone, Marijn and De Schryver, Thomas and Van Loo, Denis and Merkulova, Margarita and Roine, Antti and Liipo, Jussi},
+  journal={X-Ray Spectrometry},
+  volume={50},
+  number={2},
+  pages={92--105},
+  year={2021},
+  publisher={Wiley Online Library}
+}
+```
+The dataset can be found [here](https://rodare.hzdr.de/record/1627).
 
 
 ## Authors

@@ -13,6 +13,7 @@ function [sO] = computeResults(strProb,strRU,strUR,strJ,strD,sliceNo)
 %   strJ  - numerical results of classical Joint method that contains A 
 %           and F
 %   strD  - numerical results of ADJUST method that contains A and F
+%   sliceNo- slice number for visualizing results on 3d phantom
 % 
 % Output:
 %   sO - output structure containing sO.UR, sO.RU, sO.cJoint, sO.ADJUST
@@ -53,10 +54,12 @@ Fj  = strJ.F;
 Ad  = strD.A;
 Fd  = strD.F;
 
-
+sO.strProb = strProb; 
+sO.GT.A    = A;
+sO.GT.F    = F;
 %% UR
 
-[Aurf,Furf] = alignMatrices(A,Aur,Fur,n);
+[Aurf,Furf] = alignMatrices(A,Aur,Fur);
 sO.UR       = computePerformance(Aurf,A,n);
 sO.UR.A     = Aurf;
 sO.UR.F     = Furf;
@@ -144,11 +147,11 @@ elseif length(n) == 3
             sliceNo = floor(n(3)/2);
         end
 
-        subplot(k,5,5*(i-1)+1);imshow(AtI(:,:,sliceNo));title(sprintf('True-%d',i));
-        subplot(k,5,5*(i-1)+2);imshow(AruI(:,:,sliceNo));title(sprintf('RU-%d',i));
-        subplot(k,5,5*(i-1)+3);imshow(AurI(:,:,sliceNo));title(sprintf('UR-%d',i));
-        subplot(k,5,5*(i-1)+4);imshow(AjI(:,:,sliceNo));title(sprintf('cJoint-%d',i));
-        subplot(k,5,5*(i-1)+5);imshow(AdI(:,:,sliceNo));title(sprintf('ADJUST-%d',i));
+        subplot(k,5,5*(i-1)+1);imshow(rescale(AtI(:,:,sliceNo)));title(sprintf('True-%d',i));
+        subplot(k,5,5*(i-1)+2);imshow(rescale(AruI(:,:,sliceNo)));title(sprintf('RU-%d',i));
+        subplot(k,5,5*(i-1)+3);imshow(rescale(AurI(:,:,sliceNo)));title(sprintf('UR-%d',i));
+        subplot(k,5,5*(i-1)+4);imshow(rescale(AjI(:,:,sliceNo)));title(sprintf('cJoint-%d',i));
+        subplot(k,5,5*(i-1)+5);imshow(rescale(AdI(:,:,sliceNo)));title(sprintf('ADJUST-%d',i));
         pause(1);
     end
 
@@ -156,15 +159,35 @@ end
 
 end
 
-function [strOut] = computePerformance(A,At,n)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Supporting functions
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+function [strOut] = computePerformance(A,At,n)
+% computes the performance measures algorithm by comparing reconstructed 
+% spatial maps with ground truth spatial maps
+% We look at PSNR, SSIM and IMMSE
+% Input - 
+%   A - reconstructed spatial maps
+%   At- ground truth spatial maps
+%   n - size of images
+%
+% Output:
+%   strOut - structure containing
+%       psnr - peak signal-to-noise-ratio of individual spatial map
+%       ssim - structural similarity index of individual spatial map
+%       imse - mean-squared-error of individual spatial map
+%       psnrM, ssimM, imseM - mean of these measures
+%
 k = size(At,2);
 
 psnrI = zeros(k,1);
 ssimI = zeros(k,1);
 imseI = zeros(k,1);
 
-
+% compute for each spatial map 
 for i=1:k
     Ix = reshape(A(:,i),n);
     Iy = reshape(At(:,i),n);
@@ -179,6 +202,7 @@ strOut.psnr = psnrI;
 strOut.ssim = ssimI;
 strOut.imse = imseI;
 
+% compute the averages
 strOut.psnrM = mean(psnrI);
 strOut.ssimM = mean(ssimI);
 strOut.imseM = mean(imseI);
@@ -186,88 +210,95 @@ strOut.imseM = mean(imseI);
 end
 
 
-function [A2f,F2f,cumError,ErrorMatrix] = alignMatrices(A,A1,F1,n)
+function [A2f,F2f,cumError,ErrorMatrix] = alignMatrices(A,A1,F1)
+% align the reconstructed spatial and spectral maps based on the ground
+% truth or given spatial and spectral maps
+% 
+% Input:
+%   A - ground truth or given spatial maps 
+%   A1 - spatial maps that needs to be aligned 
+%   F1 - spectral maps that needs to be aligned
+%
+% Output:
+%   A2f - aligned spatial maps
+%   F2f - aligned spectral maps
+%   cumError - cumulative errors
+%   ErrorMatrix - mean-squared error for each pair (spatial maps only).
 
-    Amax = max(A1(:));
-    A2 = A1/Amax;
-    F2 = F1*Amax;
+Amax = max(A1(:));
+A2 = A1/Amax;
+F2 = F1*Amax;
 
-    [cumError,ErrorMatrix,minrowI,mincolI] = computeError(A2,A);
+[cumError,ErrorMatrix,minrowI,mincolI] = computeError(A2,A);
 
-    [~,idD]= sort(mincolI);
-    A2f = A2(:, minrowI(idD));
-    F2f = F2(minrowI(idD),:);
+[~,idD]= sort(mincolI);
+A2f = A2(:, minrowI(idD));
+F2f = F2(minrowI(idD),:);
 
 end
 
 
-%%% Function for calculating the error measure per image
 function [cumError,ErrorMatrix,minrowI,mincolI] = computeError(A,Atrue)
+% Function for calculating the error measure per image
+%
+% Input:
+%  A -  reconstructed spatial maps
+%  Atrue - ground truth spatial maps
+%
+% Output:
+%   cumError - cumulative error for each material
+%   ErrorMatrix - mean-squared-error for each material spatial maps pair
+%   minrowI - 
+%   mincolI - 
+% 
 
-    B = A;
-    Btrue = Atrue;
-    
-    nmat = size(Atrue,2);
-    nPix = size(Atrue,1);
-    
-    %First compute the errors for all image pairs
-    ErrorMatrix = zeros(nmat, nmat);
-    for i = 1:nmat
-        for j = 1:nmat
-            ErrorMatrix(i,j) = norm(B(:,i) - Btrue(:,j));
-        end
-    end
-    
-    % ErrorMatrix
-    
-    %Now do the matching and iteratively removing rows and colums
-    cumError = 0;
-    minrowI = zeros(nmat,1);
-    mincolI = zeros(nmat,1);
-    psnrv   = zeros(nmat,1);
-    ssimv   = zeros(nmat,1);
-    immsev  = zeros(nmat,1);
-    
-    for k = 1:nmat
+nmat = size(Atrue,2);
+nPix = size(Atrue,1);
 
-        %Find minimum value and indices in error array
-        [minvalue, minindex] = min(ErrorMatrix(:));
-        [minrow, mincol] = ind2sub(size(ErrorMatrix), minindex);
-        
-        trueI = Btrue(:,mincol);
-        recI  = B(:,minrow);
-        
-        errorPair = ErrorMatrix(minrow,mincol);
-        cumError = cumError + errorPair;
-        
-        % fprintf("Matched image %d to true image %d with error %f \n", minrow, mincol, errorPair)
-        
-        minrowI(k,1) = minrow;
-        mincolI(k,1) = mincol;
-        
-        %Remove the corresponding row and column from the array
-        
-        ErrorMatrix(minrow,:) = Inf;
-        ErrorMatrix(:,mincol) = Inf;
-    
+% First compute the errors for all image pairs
+ErrorMatrix = zeros(nmat, nmat);
+for i = 1:nmat
+    for j = 1:nmat
+        ErrorMatrix(i,j) = norm(A(:,i) - Atrue(:,j));
     end
-    
-    % fprintf("The total error is %f \n", cumError) 
-        
 end
 
-function [Af] = buildSingleImageforA(A,idx)
+% ErrorMatrix
 
-[m,n] = size(A);
+% Now do the matching and iteratively removing rows and colums
+cumError = 0;
+minrowI = zeros(nmat,1);
+mincolI = zeros(nmat,1);
 
-if nargin < 2
-    idx = linspace(1,n,n);
+% psnrv   = zeros(nmat,1);
+% ssimv   = zeros(nmat,1);
+% immsev  = zeros(nmat,1);
+
+for k = 1:nmat
+
+    %Find minimum value and indices in error array
+    [minvalue, minindex] = min(ErrorMatrix(:));
+    [minrow, mincol] = ind2sub(size(ErrorMatrix), minindex);
+
+    % trueI = Atrue(:,mincol);
+    % recI  = A(:,minrow);
+
+    errorPair = ErrorMatrix(minrow,mincol);
+    cumError = cumError + errorPair;
+
+    % fprintf("Matched image %d to true image %d with error %f \n", minrow, mincol, errorPair)
+
+    minrowI(k,1) = minrow;
+    mincolI(k,1) = mincol;
+
+    %Remove the corresponding row and column from the array
+
+    ErrorMatrix(minrow,:) = Inf;
+    ErrorMatrix(:,mincol) = Inf;
+
 end
 
-vdx = linspace(1,n,n);
-
-Af = A(:,idx)*vdx';
-
+% fprintf("The total error is %f \n", cumError)
 
 end
 

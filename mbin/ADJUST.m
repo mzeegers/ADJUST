@@ -76,15 +76,16 @@ qA      = getoptions(options,'qA',1);        % max-value for matrix A
 resTol  = getoptions(options,'resTol',1e-6); % tolerance for residual
 relTol  = getoptions(options,'relTol',1e-9); % tolerance for residual progress
 progTol = getoptions(options,'progTol',1e-6);% tolerance for iterate progress
-rho     = getoptions(options,'rho',1e-2);
-EQ_A    = getoptions(options,'EQ_A',0);
-dynUpd  = getoptions(options,'dynUpd',1);
+rho     = getoptions(options,'rho',1e-2);    % acceleration parameter
+EQ_A    = getoptions(options,'EQ_A',0);      % equality constraints on A (1: strong, 0: weak)
+dynUpd  = getoptions(options,'dynUpd',1);    % dynamic update of acceleration parameter (experimental)
+showIter= getoptions(options,'showIter',1);  % show iterates (1: yes, 0: no)
 
 %% initialization
 
 A0 = rand(n,k);
 
-for i=1:size(A0,1)      % normalize the rows
+for i=1:size(A0,1)      % normalize the rows by their sum
     A0(i,:) = A0(i,:)/sum(A0(i,:)); 
 end
 
@@ -138,7 +139,6 @@ for i=1:epochs
     R       = minConf_SPG(funObjR,R(:),funProjR,Opt);
     R       = reshape(R,k,p);
     
-    
     % channel matrix
     F       = R*T;
     
@@ -152,6 +152,7 @@ for i=1:epochs
     res  = (Y - W*(A*F));
     Q    = Q + res;
     
+    % register time
     time_iter = toc;
     time_hist = time_hist + time_iter;
     
@@ -165,9 +166,11 @@ for i=1:epochs
         hist.res_prog(i)=1; 
     end
     
-    % show iterate and progress
+    % show iterate and progress (every 100 iterations)
+    if ((showIter == 1) && (rem(i,100)==0)) || (showIter > 1)
     fprintf('%10d %12.3e %12.3e %12.3e [%4.2e/%4.2e]\n',i,...
         hist.res(i),hist.res_prog(i),hist.prog(i),time_iter,time_hist);
+    end
     
     % record solution
     if i==1
@@ -188,7 +191,7 @@ for i=1:epochs
         break;
     end
     
-    % dynamic update of rho
+    % dynamic update of rho (this is an experimental feature)
     if dynUpd
         if (rho > 5e-2) && (hist.res_prog(i) > 1e-3)
             rho = 1e-2;
@@ -210,6 +213,7 @@ end
 
 function [f,g] = misfitR(R,Y,W,A,T,k,nY)
 % misfit function for matrix R, where Y = W * A * R * T. 
+% provides functional value and gradient at particular point
 
 % get the size of U and reshape matrix R
 [m,t] = size(Y);
@@ -226,6 +230,7 @@ end
 
 function [f,g] = misfitA(A,F,Y,W,k,nY)
 % misfit function handle for matrix A, where Y = W * A * F
+% provides functional value and gradient at particular point
 
 % get the size of U and reshape A
 [m,n] = size(W);
@@ -252,9 +257,9 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function [x] = projSimplexR(x,m,n)
+% projector for matrix R (simplex constraints on both rows and columns)
 
 R = reshape(x,m,n);         % reshape matrix R
-
 R = projectTwoSimplexConstr(R);
 x = R(:);
 
@@ -265,18 +270,23 @@ function [x] = projectTwoSimplexConstr(R)
 [m,n]    = size(R);
 MAX_ITER = 1e4;
 
-%%% solve using ADMM
-
+%%% solve using alternating projections (similar to Dijkstra's algorithm)
 x = R;
+
 if sum(x(:)) >= 1
     for i=1:MAX_ITER
         
+        % row projection
         x1 = transpose(proj_simplex_q(0.5*(x+R)',1,1));
+        
+        % column projection
         x = proj_simplex_q(x1,1,0);
         
+        % stopping criterion
         if norm(x1-x,'fro') < 1e-6
             break;
         end
+        
     end
 end
 
@@ -287,7 +297,7 @@ end
 function [x] = proj_simplex_q(x,q,EQ)
 % simplex projector
 
-% EQ = 0;             % Equality constraints indicator (set to 1 if required)
+% EQ = 0;           % Equality constraints indicator (set to 1 if required)
 VECTORIZE = false;  % vectorization indictor ('false' to keep it as matrix)
 
 
