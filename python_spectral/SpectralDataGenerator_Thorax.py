@@ -60,7 +60,7 @@ materials = [[1,'bone', None], [2, 'blood', None], [3,'tissue',None], [4, 'blood
 
 def computeMaterialEnergyMatrixXray(materials):
     #Collect the attenuation spectra for each material
-    AttenuationSpectra = collectAttenuationSpectra(RootDataPath, materials)
+    AttenuationSpectra = collectAttenuationSpectra(materials)
     
     #Setup the energy discretization
     EnergyBounds = np.linspace(MinEnergy, MaxEnergy, num = energies)
@@ -74,7 +74,7 @@ def computeMaterialEnergyMatrixXray(materials):
 
     return energyatts
 
-def collectAttenuationSpectra(Rootdatapath, Labels):
+def collectAttenuationSpectra(Labels):
     AttenuationSpectra = []
     print("\nLoading attenuation spectra...")
             
@@ -83,10 +83,10 @@ def collectAttenuationSpectra(Rootdatapath, Labels):
             if (mat[1] in [i[1] for i in ElementaryData]):                      #Elementary material
                 AtNo = elementToAtomic(mat[1])
                 if (AtNo > 0):
-                    attData = getAttenuationSpectrum(AtNo, Rootdatapath)
+                    attData = getAttenuationSpectrum(AtNo)
                     AttenuationSpectra.append((mat[0],)+(mat[1],) + attData)
             else:
-                attData = getAttenuationSpectrum(mat[1], Rootdatapath)          #Mixture material
+                attData = getAttenuationSpectrum(mat[1])                        #Mixture material
                 AttenuationSpectra.append((mat[0],)+(mat[1],) + attData)
         elif(mat[0] != 0 and mat[1] == "Void"):
             #Make the zero attenuation spectrum
@@ -106,7 +106,7 @@ def elementToAtomic(materialname):
     else:
         return next(x for x in ElementaryData if x[1] == materialname)[0]
 
-def getAttenuationSpectrum(materialno, rootdatapath):
+def getAttenuationSpectrum(materialno):
 
     data = np.array(physdata.xray.fetch_coefficients(materialno)) #Density taken from array
 

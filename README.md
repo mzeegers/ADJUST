@@ -91,7 +91,7 @@ These scripts are written in Python (version 3.7 or higher). Apart from this, ph
 
 ## References
 
-The algorithms implemented in this MATLAB package are described in following [paper](https://iopscience.iop.org/article/10.1088/1361-6420/ac932e):
+The algorithms implemented in this MATLAB package are described in following [paper](https://iopscience.iop.org/article/10.1088/1361-6420/ac932e). If you use (parts of) this code in a publication, we would appreciate it if you would refer to:
 
 ```
 @article{
