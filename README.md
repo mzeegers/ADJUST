@@ -1,7 +1,7 @@
 # ADJUST: A dictionary-based joint reconstruction and unmixing for spectral tomography
 
    <p align="center">
-   <img src="./images/UnmixingSchemev4.svg">
+   <img src="./images/UnmixingSchemev9_Github.svg">
     </p>
 
 ## Introduction
@@ -99,11 +99,14 @@ The algorithms implemented in this MATLAB package are described in following [pa
   author={Zeegers, Math{\'e} T and Kadu, Ajinkya and van Leeuwen, Tristan and Batenburg, Kees Joost},
   journal={Inverse Problems},
   year={2022},
+  volume={22},
+  number={12},
+  pages={125002},
   publisher={IOP Publishing},
   doi={10.1088/1361-6420/ac932e}
 }
 ```
-The preprint can be found [here](https://arxiv.org/abs/2112.11406)
+The preprint can be found [here](https://arxiv.org/abs/2112.11406).
 
 The micro-CT dataset required to run the eighth script is introduced in the paper below: 
 
