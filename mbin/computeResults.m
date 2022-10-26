@@ -1,4 +1,4 @@
-function [sO] = computeResults(strProb,strRU,strUR,strJ,strD,sliceNo)
+function [sO] = computeResults(strProb, strRU, strUR, strJ, strD, sliceNo)
 % computeResults Plot various comparison plots and tables for methods 
 %   1) RU - Reconstruction-then-Unmixing
 %   2) UR - Unmixing-the-Reconstruction
@@ -59,29 +59,29 @@ sO.GT.A    = A;
 sO.GT.F    = F;
 %% UR
 
-[Aurf,Furf] = alignMatrices(A,Aur,Fur);
-sO.UR       = computePerformance(Aurf,A,n);
-sO.UR.A     = Aurf;
-sO.UR.F     = Furf;
+[Aurf, Furf] = alignMatrices(A, Aur, Fur);
+sO.UR   = computePerformance(Aurf, A, n);
+sO.UR.A = Aurf;
+sO.UR.F = Furf;
 
 %% RU
 
-[Aruf,Fruf] = alignMatrices(A,Aru,Fru,n);
-sO.RU       = computePerformance(Aruf,A,n);
-sO.RU.A     = Aruf;
-sO.RU.F     = Fruf;
+[Aruf, Fruf] = alignMatrices(A, Aru, Fru);
+sO.RU   = computePerformance(Aruf, A, n);
+sO.RU.A = Aruf;
+sO.RU.F = Fruf;
 
 %% cJoint
 
-[Ajf,Fjf]   = alignMatrices(A,Aj,Fj,n);
-sO.cJoint   = computePerformance(Ajf,A,n);
+[Ajf, Fjf]   = alignMatrices(A, Aj, Fj);
+sO.cJoint   = computePerformance(Ajf, A, n);
 sO.cJoint.A = Ajf;
 sO.cJoint.F = Fjf;
 
 %% ADJUST
 
-[Adf,Fdf]   = alignMatrices(A,Ad,Fd,n);
-sO.ADJUST   = computePerformance(Adf,A,n);
+[Adf, Fdf]   = alignMatrices(A, Ad, Fd);
+sO.ADJUST   = computePerformance(Adf, A, n);
 sO.ADJUST.A = Adf;
 sO.ADJUST.F = Fdf;
 
@@ -94,14 +94,14 @@ fprintf('%12s | %12s | %12s | %12s | %12s \n','','RU','UR',...
 
 fprintf('--------------------------------------------------------------------------\n');
 
-fprintf('%12s | %12.4f | %12.4f | %12.4f | %12.4f \n','PSNR',sO.RU.psnrM,...
-    sO.UR.psnrM,sO.cJoint.psnrM,sO.ADJUST.psnrM);
+fprintf('%12s | %12.4f | %12.4f | %12.4f | %12.4f \n','PSNR', sO.RU.psnrM,...
+    sO.UR.psnrM, sO.cJoint.psnrM, sO.ADJUST.psnrM);
 
-fprintf('%12s | %12.4f | %12.4f | %12.4f | %12.4f \n','SSIM',sO.RU.ssimM,...
-    sO.UR.ssimM,sO.cJoint.ssimM,sO.ADJUST.ssimM);
+fprintf('%12s | %12.4f | %12.4f | %12.4f | %12.4f \n','SSIM', sO.RU.ssimM,...
+    sO.UR.ssimM, sO.cJoint.ssimM, sO.ADJUST.ssimM);
 
-fprintf('%12s | %12.4f | %12.4f | %12.4f | %12.4f \n','MSE',sO.RU.imseM,...
-    sO.UR.imseM,sO.cJoint.imseM,sO.ADJUST.imseM);
+fprintf('%12s | %12.4f | %12.4f | %12.4f | %12.4f \n','MSE', sO.RU.imseM,...
+    sO.UR.imseM, sO.cJoint.imseM, sO.ADJUST.imseM);
 
 fprintf('--------------------------------------------------------------------------\n');
 
@@ -111,48 +111,51 @@ fprintf('-----------------------------------------------------------------------
 k = size(A,2);
 
 if length(n) == 2
-    fig = figure(100);colormap hot;
-    for i=1:k
-        AtI  = reshape(A(:,i),n);
-        AruI = reshape(Aurf(:,i),n);
-        AurI = reshape(Aurf(:,i),n);
-        AjI  = reshape(Ajf(:,i),n);
-        AdI  = reshape(Adf(:,i),n);
+    fig = figure(100); colormap hot;
+    for i = 1:k
+        AtI  = reshape(A(:,i), n);
+        AruI = reshape(Aurf(:, i), n);
+        AurI = reshape(Aurf(:, i), n);
+        AjI  = reshape(Ajf(:, i), n);
+        AdI  = reshape(Adf(:, i), n);
 
-        subplot(k,5,5*(i-1)+1);imagesc(AtI,[0 1]);title(sprintf('True-%d',i));
-        axis image;set(gca,'XTick',[],'YTick',[]);
-        subplot(k,5,5*(i-1)+2);imagesc(AruI,[0 1]);title(sprintf('RU-%d',i));
-        axis image;set(gca,'XTick',[],'YTick',[]);
-        subplot(k,5,5*(i-1)+3);imagesc(AurI,[0 1]);title(sprintf('UR-%d',i));
-        axis image;set(gca,'XTick',[],'YTick',[]);
-        subplot(k,5,5*(i-1)+4);imagesc(AjI,[0 1]);title(sprintf('cJoint-%d',i));
-        axis image;set(gca,'XTick',[],'YTick',[]);
-        subplot(k,5,5*(i-1)+5);imagesc(AdI,[0 1]);title(sprintf('ADJUST-%d',i));
-        axis image;set(gca,'XTick',[],'YTick',[]);
-        pause(1);
+        subplot(k, 5, 5*(i-1)+1);
+        imshow(AtI, [0 1]); title(sprintf('True-%d', i));
+        subplot(k, 5, 5*(i-1)+2);
+        imshow(AruI, [0 1]);title(sprintf('RU-%d', i));
+        subplot(k, 5, 5*(i-1)+3);
+        imshow(AurI, [0 1]); title(sprintf('UR-%d', i));
+        subplot(k, 5, 5*(i-1)+4);
+        imshow(AjI, [0 1]); title(sprintf('cJoint-%d', i));
+        subplot(k, 5, 5*(i-1)+5);
+        imshow(AdI, [0 1]); title(sprintf('ADJUST-%d', i));
+        pause(0.1);
     end
     h = axes(fig,'visible','off');
     colorbar(h,'Position',[0.93 0.168 0.022 0.7]);
 
 elseif length(n) == 3
     figure(100);
-    for i=1:k
-        AtI  = reshape(A(:,i),n);
-        AruI = reshape(Aurf(:,i),n);
-        AurI = reshape(Aurf(:,i),n);
-        AjI  = reshape(Ajf(:,i),n);
-        AdI  = reshape(Adf(:,i),n);
+    for i = 1:k
+        AtI  = reshape(A(:, i), n);
+        AruI = reshape(Aurf(:, i), n);
+        AurI = reshape(Aurf(:, i), n);
+        AjI  = reshape(Ajf(:, i), n);
+        AdI  = reshape(Adf(:, i), n);
         
-        if nargin < 7 
-            sliceNo = floor(n(3)/2);
-        end
+        if nargin < 7, sliceNo = floor(n(3)/2); end
 
-        subplot(k,5,5*(i-1)+1);imshow(rescale(AtI(:,:,sliceNo)));title(sprintf('True-%d',i));
-        subplot(k,5,5*(i-1)+2);imshow(rescale(AruI(:,:,sliceNo)));title(sprintf('RU-%d',i));
-        subplot(k,5,5*(i-1)+3);imshow(rescale(AurI(:,:,sliceNo)));title(sprintf('UR-%d',i));
-        subplot(k,5,5*(i-1)+4);imshow(rescale(AjI(:,:,sliceNo)));title(sprintf('cJoint-%d',i));
-        subplot(k,5,5*(i-1)+5);imshow(rescale(AdI(:,:,sliceNo)));title(sprintf('ADJUST-%d',i));
-        pause(1);
+        subplot(k, 5, 5*(i-1)+1);
+        imshow(AtI(:, :, sliceNo), []); title(sprintf('True-%d', i));
+        subplot(k, 5, 5*(i-1)+2);
+        imshow(AruI(:, :, sliceNo), []); title(sprintf('RU-%d', i));
+        subplot(k, 5, 5*(i-1)+3);
+        imshow(AurI(:, :, sliceNo), []); title(sprintf('UR-%d', i));
+        subplot(k, 5, 5*(i-1)+4);
+        imshow(AjI(:, :, sliceNo), []); title(sprintf('cJoint-%d', i));
+        subplot(k, 5, 5*(i-1)+5);
+        imshow(AdI(:, :, sliceNo), []); title(sprintf('ADJUST-%d', i));
+        pause(0.1);
     end
 
 end
@@ -165,7 +168,7 @@ end
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function [strOut] = computePerformance(A,At,n)
+function [strOut] = computePerformance(A, At, n)
 % computes the performance measures algorithm by comparing reconstructed 
 % spatial maps with ground truth spatial maps
 % We look at PSNR, SSIM and IMMSE
@@ -181,21 +184,21 @@ function [strOut] = computePerformance(A,At,n)
 %       imse - mean-squared-error of individual spatial map
 %       psnrM, ssimM, imseM - mean of these measures
 %
-k = size(At,2);
+k = size(At, 2);
 
-psnrI = zeros(k,1);
-ssimI = zeros(k,1);
-imseI = zeros(k,1);
+psnrI = zeros(k, 1);
+ssimI = zeros(k, 1);
+imseI = zeros(k, 1);
 
 % compute for each spatial map 
-for i=1:k
-    Ix = reshape(A(:,i),n);
-    Iy = reshape(At(:,i),n);
+for i = 1:k
+    Ix = reshape(A(:, i), n);
+    Iy = reshape(At(:, i), n);
     Ix = double(Ix);
     Iy = double(Iy);
-    psnrI(i,1) = psnr(Ix,Iy);
-    ssimI(i,1) = ssim(Ix,Iy);
-    imseI(i,1) = immse(Ix,Iy);
+    psnrI(i, 1) = psnr(Ix, Iy);
+    ssimI(i, 1) = ssim(Ix, Iy);
+    imseI(i, 1) = immse(Ix, Iy);
 end
 
 strOut.psnr = psnrI;
@@ -210,7 +213,7 @@ strOut.imseM = mean(imseI);
 end
 
 
-function [A2f,F2f,cumError,ErrorMatrix] = alignMatrices(A,A1,F1)
+function [A2f, F2f, cumError, ErrorMatrix] = alignMatrices(A, A1, F1)
 % align the reconstructed spatial and spectral maps based on the ground
 % truth or given spatial and spectral maps
 % 
@@ -226,19 +229,19 @@ function [A2f,F2f,cumError,ErrorMatrix] = alignMatrices(A,A1,F1)
 %   ErrorMatrix - mean-squared error for each pair (spatial maps only).
 
 Amax = max(A1(:));
-A2 = A1/Amax;
-F2 = F1*Amax;
+A2 = A1 / Amax;
+F2 = F1 * Amax;
 
-[cumError,ErrorMatrix,minrowI,mincolI] = computeError(A2,A);
+[cumError, ErrorMatrix, minrowI, mincolI] = computeError(A2, A);
 
-[~,idD]= sort(mincolI);
+[~, idD]= sort(mincolI);
 A2f = A2(:, minrowI(idD));
-F2f = F2(minrowI(idD),:);
+F2f = F2(minrowI(idD), :);
 
 end
 
 
-function [cumError,ErrorMatrix,minrowI,mincolI] = computeError(A,Atrue)
+function [cumError, ErrorMatrix, minrowI, mincolI] = computeError(A, Atrue)
 % Function for calculating the error measure per image
 %
 % Input:
@@ -252,14 +255,14 @@ function [cumError,ErrorMatrix,minrowI,mincolI] = computeError(A,Atrue)
 %   mincolI - 
 % 
 
-nmat = size(Atrue,2);
-nPix = size(Atrue,1);
+nmat = size(Atrue, 2);
+nPix = size(Atrue, 1);
 
 % First compute the errors for all image pairs
 ErrorMatrix = zeros(nmat, nmat);
 for i = 1:nmat
     for j = 1:nmat
-        ErrorMatrix(i,j) = norm(A(:,i) - Atrue(:,j));
+        ErrorMatrix(i, j) = norm(A(:, i) - Atrue(:, j));
     end
 end
 
@@ -267,8 +270,8 @@ end
 
 % Now do the matching and iteratively removing rows and colums
 cumError = 0;
-minrowI = zeros(nmat,1);
-mincolI = zeros(nmat,1);
+minrowI = zeros(nmat, 1);
+mincolI = zeros(nmat, 1);
 
 % psnrv   = zeros(nmat,1);
 % ssimv   = zeros(nmat,1);
@@ -283,18 +286,18 @@ for k = 1:nmat
     % trueI = Atrue(:,mincol);
     % recI  = A(:,minrow);
 
-    errorPair = ErrorMatrix(minrow,mincol);
-    cumError = cumError + errorPair;
+    errorPair = ErrorMatrix(minrow, mincol);
+    cumError  = cumError + errorPair;
 
     % fprintf("Matched image %d to true image %d with error %f \n", minrow, mincol, errorPair)
 
-    minrowI(k,1) = minrow;
-    mincolI(k,1) = mincol;
+    minrowI(k, 1) = minrow;
+    mincolI(k, 1) = mincol;
 
     %Remove the corresponding row and column from the array
 
-    ErrorMatrix(minrow,:) = Inf;
-    ErrorMatrix(:,mincol) = Inf;
+    ErrorMatrix(minrow, :) = Inf;
+    ErrorMatrix(:, mincol) = Inf;
 
 end
 

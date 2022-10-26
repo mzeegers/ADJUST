@@ -1,4 +1,4 @@
-function [Asol,Fsol,hist] = cJoint(Y,W,k,options)
+function [Asol, Fsol, hist] = cJoint(Y, W, k, options)
 % cJoint - classical JOINT reconstruction and unmixing algorithm for
 % solving the spectral tomographic inverse problem
 %
@@ -45,29 +45,33 @@ function [Asol,Fsol,hist] = cJoint(Y,W,k,options)
 %   Mathé Zeegers, 
 %       Centrum Wiskunde & Informatica, Amsterdam (M.T.Zeegers@cwi.nl)
 
-% get the size of U
-[m,n] = size(W);
-[m,c] = size(Y);
+if nargin<4, options = []; end
 
-
-if nargin<4
-    options = [];
-end
-
-epochs  = getoptions(options, 'iterMax' , 1e3); % maximum number of iterations
-epIter  = getoptions(options, 'innerIter' , 2); % inner-iterations
-resTol  = getoptions(options, 'resTol' , 1e-6); % tolerance for residual
-progTol = getoptions(options, 'progTol' , 1e-6);% tolerance for progress
-rho     = getoptions(options, 'rho' , 0.01);    % acceleration parameter
-showIter= getoptions(options, 'showIter', 1);   % display iter
+epochs  = getoptions(options, 'iterMax' ,  1e3);   % maximum number of iterations
+epIter  = getoptions(options, 'innerIter', 3);     % inner-iterations
+resTol  = getoptions(options, 'resTol',    1e-6);  % tolerance for residual
+progTol = getoptions(options, 'progTol',   1e-6);  % tolerance for progress
+rho     = getoptions(options, 'rho',       0.01);  % acceleration parameter
+showIter= getoptions(options, 'showIter',  1);     % display iter
+use_cuda= getoptions(options, 'use_cuda',  gpuDeviceCount > 0); % use GPUs
 
 %% initialization
 
+% get the size of U
+[m, n] = size(W);
+[m, c] = size(Y);
+
 % randomized spatial maps
-A0 = rand(n,k);
+A0 = rand(n, k);
 
 % initial spectral maps
-F0 = rand(k,c);
+F0 = rand(k, c);
+
+if use_cuda
+    A0 = gpuArray(single(A0));
+    F0 = gpuArray(single(F0));
+    Y  = gpuArray(single(Y));
+end
 
 %% main loop
 
@@ -89,9 +93,9 @@ F = F0;
 A = A0;
 Q = 0*Y;
 
-fprintf('=======================================================================================\n');
-fprintf('                                    cJoint                                             \n');
-fprintf('=======================================================================================\n');
+fprintf('==========================================================\n');
+fprintf('                cJoint                                    \n');
+fprintf('==========================================================\n');
 fprintf('image size         : %d x %d \n',sqrt(n),sqrt(n));
 fprintf('measurements       : %d x %d (total : %d) \n',size(Y),numel(Y));
 fprintf('materials          : %d \n',k);
@@ -109,19 +113,23 @@ for i=1:epochs
 
     % solve for F
     tic;
-    funObjF = @(X) misfitF(X,Y+rho*Q,W,A,k,normY);
+    funObjF = @(X) misfitF(X, Y + rho*Q , W, A, k, normY, use_cuda);
     Fp      = F;
-    F       = minConf_SPG(funObjF,F(:),funProjF,Opt);
-    F       = reshape(F,k,c);
+    F       = minConf_SPG(funObjF, F(:), funProjF, Opt);
+    F       = reshape(F, k, c);
 
     % solve for A
-    funObjA = @(X) misfitA(X,F,Y+rho*Q,W,k,normY);
+    funObjA = @(X) misfitA(X, F, Y + rho*Q, W, k, normY, use_cuda);
     Ap      = A;
-    A       = minConf_SPG(funObjA,A(:),funProjA,Opt);
-    A       = reshape(A,n,k);
+    A       = minConf_SPG(funObjA, A(:), funProjA, Opt);
+    A       = reshape(A, n, k);
 
     % update Q
-    res  = (Y - W*(A*F));
+    if use_cuda
+        res = Y - gpuArray(W * gather(A)) * F;
+    else
+        res  = Y - (W * A) * F;
+    end
     Q    = Q + res;
 
     % register time
@@ -129,8 +137,8 @@ for i=1:epochs
     time_hist = time_hist + time_iter;
 
     % history
-    hist.res(i)  = norm(res,'fro')/normY;
-    hist.prog(i) = norm(F-Fp,'fro')+norm(A-Ap,'fro');
+    hist.res(i)  = norm(res, 'fro') / normY;
+    hist.prog(i) = norm(F - Fp, 'fro') + norm(A - Ap, 'fro');
     hist.rho(i)  = rho;
     if i>1
         hist.res_prog(i) = hist.res(i) - hist.res(i-1);
@@ -146,56 +154,78 @@ for i=1:epochs
 
     % record solution with least residual (since the convegence is non-monotonic)
     if i==1
-        Asol = A;Fsol = F;
+        Asol = A;
+        Fsol = F;
         hist.resmin = hist.res(i);
     else
         if hist.res(i) < hist.resmin
+            Asol = A;
+            Fsol = F;
             hist.resmin = hist.res(i);
-            Asol = A;Fsol = F;
         end
     end
 
     % stopping criteria
     if (hist.res(i) < resTol)  || (hist.prog(i) < progTol)
-        fprintf('%10d %15.5e %15.5e\n',i,hist.res(i),hist.prog(i));
+        fprintf('%10d %15.5e %15.5e\n', i, hist.res(i), hist.prog(i));
         break;
     end
 
 end
 
-fprintf('=======================================================================================\n');
+if use_cuda
+    Asol = gather(Asol);
+    Fsol = gather(Fsol);
+end
+
+fprintf('==========================================================\n\n');
 
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function [f,g] = misfitF(F,Y,W,A,k,nY)
+function [f,g] = misfitF(F, Y, W, A, k, nY, use_cuda)
 % misfit function for matrix F, where Y = W * A * F.
 % provide functional value and gradient at given point
 
 % get the size of U and reshape matrix R
-[m,c] = size(Y);
-F     = reshape(F,k,c);
+[m, c] = size(Y);
+F      = reshape(F, k, c);
 
-res = (W*A)*F - Y;                  % residual
-f   = 0.5 * norm(res,'fro')^2/nY;   % function value (least-squares misfit)
-g   = A' * (W' * res);              % gradient wrt matrix F (least-squares)
-g   = g(:)/nY;
+if use_cuda
+    WA  = gpuArray(W * gather(A));
+else
+    WA  = W * A;
+end
+
+res = WA * F - Y;                   % residual
+f   = 0.5 * norm(res,'fro')^2 / nY; % function value (least-squares misfit)
+g   = WA' * res;                    % gradient wrt matrix F (least-squares)
+g   = g(:) / nY;
 
 end
 
-function [f,g] = misfitA(A,F,Y,W,k,nY)
+
+function [f,g] = misfitA(A, F, Y, W, k, nY, use_cuda)
 % misfit function handle for matrix A
 % provide functional value and gradient at given point
 
 % get the size of U and reshape A
-[m,n] = size(W);
-A     = reshape(A,n,k);
+[m, n] = size(W);
+A      = reshape(A, n, k);
 
-res = (W*A)*F - Y;                % residual
-f   = 0.5 * norm(res,'fro')^2/nY; % function value (least-squares misfit)
-g   = (W' * res) * F';            % gradient wrt A
-g   = g(:)/nY;
+if use_cuda
+    WA  = gpuArray(W * gather(A));
+    res = WA * F - Y;                   % residual
+    f   = 0.5 * norm(res,'fro')^2 /nY;  % function value (least-squares misfit)
+    g   = W' * gather(res * F');        % gradient wrt A
+    g   = gpuArray( g(:) )/ nY;
+else
+    res = (W*A) * F - Y;                % residual
+    f   = 0.5 * norm(res,'fro')^2 /nY;  % function value (least-squares misfit)
+    g   = W' * (res * F');              % gradient wrt A
+    g   = g(:) / nY;
+end
 
 end
 
@@ -221,9 +251,7 @@ end
 function v = getoptions(options, name, v, mandatory)
 % getoptions - retrieve options parameter
 
-if nargin<4
-    mandatory = 0;
-end
+if nargin < 4, mandatory = 0; end
 
 if isfield(options, name)
     v = eval(['options.' name ';']);
