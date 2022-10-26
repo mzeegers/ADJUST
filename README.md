@@ -1,4 +1,4 @@
-# ADJUST: A dictionary-based joint reconstruction and unmixing for spectral tomography
+# <a href="https://arxiv.org/abs/2112.11406" style="color: black;">ADJUST: A Dictionary-based Joint reconstruction and Unmixing for Spectral Tomography</a>
 
    <p align="center">
    <img src="./images/UnmixingSchemev9_Github.svg">
@@ -108,21 +108,7 @@ The algorithms implemented in this MATLAB package are described in following [pa
 ```
 The preprint can be found [here](https://arxiv.org/abs/2112.11406).
 
-The micro-CT dataset required to run the eighth script is introduced in the paper below: 
-
-```
-@article{sittner2021spectral,
-  title={Spectral X-ray computed micro tomography: 3-dimensional chemical imaging},
-  author={Sittner, Jonathan and Godinho, Jose RA and Renno, Axel D and Cnudde, Veerle and Boone, Marijn and De Schryver, Thomas and Van Loo, Denis and Merkulova, Margarita and Roine, Antti and Liipo, Jussi},
-  journal={X-Ray Spectrometry},
-  volume={50},
-  number={2},
-  pages={92--105},
-  year={2021},
-  publisher={Wiley Online Library}
-}
-```
-The dataset can be found [here](https://rodare.hzdr.de/record/1627).
+The micro-CT dataset required to run the eighth script is introduced in this [paper](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/full/10.1002/xrs.3200) by Sittner et al. (2020). The dataset can be found [here](https://rodare.hzdr.de/record/1627).
 
 
 ## Authors
