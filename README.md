@@ -1,4 +1,4 @@
-# <a href="https://arxiv.org/abs/2112.11406" style="color: black;">ADJUST: A Dictionary-based Joint reconstruction and Unmixing for Spectral Tomography</a>
+# <a href="https://arxiv.org/abs/2112.11406" style="color: black;">ADJUST</a>: A Dictionary-based Joint reconstruction and Unmixing for Spectral Tomography
 
    <p align="center">
    <img src="./images/UnmixingSchemev9_Github.svg">
